@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+   <meta charset="utf-8">
+   <title>COMP5347 Assignment One</title>
+   <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+<form method="get" action="">
+</form>
+   <div id="search-box"> 
+      <!--below is the search functions-->
+      <input type="text" id="search-book">
+      <button id="search-button" onclick=search()>search</button>
+      <select name="category">
+         <option value="All">All</option>
+         <option value="Autobiography">Autobiography</option>
+         <option value="Action and Adventure">Action and Adventure</option>
+         <option value="Art">Art</option>
+         <option value="Health">Health</option>
+         <option value="Science Fiction">Science Fiction</option>
+         <option value="Science History">Science History</option>
+      </select>
+      <button id="search-button" onclick=filter()>filter</button>
+
+      <!--below is the cart information and cart operations-->
+      <div id="cart">
+         <button id="add-cart" onclick=addCart()>Add to cart</button>
+         <button id="reset-cart" onclick=resetCart()>Reset the cart</button>
+         <img id="cart-img" src="images/icon/cart.jpg" alt="cart">
+         <span id="cart-number">(0)</span>
+      </div>
+   </div>
+
+
+<!--below is the book list-->
+<div id = "list-box">
+   <table>
+      <thead>
+         <tr>
+            <th></th>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Authors</th>
+            <th>Year</th>
+            <th>Price</th>
+            <th>Publisher</th>
+            <th>Category</th>
+         </tr>
+      </thead>
+      <!--the books will be added using javascript-->
+      <tbody id="table-body"></tbody>
+   </table>
+</div>
+
+<script type="text/javascript" src="data.js"></script>
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
